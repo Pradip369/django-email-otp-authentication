@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successfully Login</title>
+</head>
+
+<body>
+    <h1>Welcome <strong>{{username}}</strong></h1>
+    <hr>
+    <h6>Have a great day {{username}}</h6>
+    <h4>If this login user is not you then click here : 
+    <a href="http://{{request.site.domain}}{% url 'set_pass_email' activation_key %}">Reset Password</a>
+    </h4>
+    <p>http://{{request.site.domain}}{% url 'set_pass_email' activation_key %}</p>
+
+    <p>Log out from all devices : {{secret_key}}</p>
+    <small>Team {{request.site.name}}</small>
+</body>
+
+</html>
