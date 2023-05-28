@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        .success{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    {% for message in messages %}
+       <span class="success">{{message}}</span>
+    {% endfor %}
+    {% endif %} 
+    <h2>I am {{us}}</h2>
+    <a href="/roll/logout_user">Logout</a>
+    <a href="{% url 'cp' %}">Change Password</a>
+</body>
+</html>

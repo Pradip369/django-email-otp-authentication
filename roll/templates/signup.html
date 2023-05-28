@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<body>
+    <a href="/roll/login_user">Login</a>
+    <form action="" method="POST">
+        {% csrf_token %}
+    <h1>{{fm.as_p}}</h1>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
